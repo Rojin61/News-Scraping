@@ -83,7 +83,7 @@ def kathmandu_post_scrape(keyword):
         link = article.a['href']
 
         with open("kathmandu_post_articles.json", "w") as f:
-                json.dump(kathmandu_post_articles, f, indent=4)
+                json.dump(kathmandu_post_articles, f, indent=4, ensure_ascii=False)
         if keyword == "@all" or keyword.lower() in title.lower():
             kathmandu_post_articles.append({
                 "title": title.strip(),
@@ -107,7 +107,7 @@ def onlinekhabar_scrape(keyword):
         link = article.a['href']
         
         with open("onlinekhabar_articles.json", "w") as f:
-            json.dump(onlinekhabar_articles, f, indent=4)
+            json.dump(onlinekhabar_articles, f, indent=4, ensure_ascii=False)
         if keyword == "@all" or keyword.lower() in title.lower():
             onlinekhabar_articles.append({
                 "title": title.strip(),
@@ -131,7 +131,7 @@ def setopati_scrape(keyword):
         link = article.a['href']
 
         with open("setopati_articles.json", "w") as f:
-            json.dump(setopati_articles, f, indent=4)
+            json.dump(setopati_articles, f, indent=4, ensure_ascii=False)
         
         if keyword == "@all" or keyword.lower() in title.lower():
             setopati_articles.append({
